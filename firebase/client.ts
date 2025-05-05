@@ -3,9 +3,9 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAlgDT_s_l9mMrCY4ApqJz0bVFs50Jkpo4",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "mockprepper.firebaseapp.com",
-  projectId: "mockprepper",
+  projectId: process.env.FIREBASE_PROJECT_ID,
   storageBucket: "mockprepper.firebasestorage.app",
   messagingSenderId: "232793467732",
   appId: "1:232793467732:web:e083bd44381713d7c876c1",
