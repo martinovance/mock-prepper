@@ -90,7 +90,7 @@ interface InterviewFormProps {
   role: string;
   level: string;
   type: string;
-  techstack: string[];
+  techStack: string[];
   amount: number;
 }
 
