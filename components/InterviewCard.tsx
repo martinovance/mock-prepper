@@ -72,7 +72,7 @@ const InterviewCard = ({
                   : `/interview/${interviewId}`
               }
             >
-              {feedback ? "Check Feedback" : "View"}
+              {feedback ? "Check Feedback" : "View Interview"}
             </Link>
           </Button>
         </div>
