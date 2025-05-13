@@ -27,21 +27,23 @@ const page = async ({ params }: RouteParams) => {
               className="rounded-full object-cover size-[40[x]"
             />
             <h3 className="capitalize">{interview.role} interview</h3>
-            <DisplayTechIcon techStack={interview.techStack} />
           </div>
 
-          <p className="bg-dark-200 px-4 py-2 rounded-lg h-fit capitalize">
-            {interview.type}
-          </p>
+          <DisplayTechIcon techStack={interview.techStack} />
         </div>
 
-        <Agent
-          userName={user?.name}
-          interviewId={id}
-          type="interview"
-          questions={interview.questions}
-        />
+        <p className="bg-dark-200 px-4 py-2 rounded-lg h-fit capitalize">
+          {interview.type}
+        </p>
       </div>
+
+      <Agent
+        userName={user?.name || ""}
+        userId={user?.id}
+        interviewId={id}
+        type="interview"
+        questions={interview.questions}
+      />
     </>
   );
 };
